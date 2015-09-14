@@ -1,17 +1,16 @@
 function EvenFibbonaci() {
-
-	var x = 0;
 	var y = 0;
-	
-	for(var sum = 0; sum < 4000000;){
-		console.log(x);
-		y = x + (x + 1);
-		if(y % 2 == 0)
-		{
-			sum +=y;
-		}
+	var x = 1;
+	var y = 2
+	for (var sum = 0; sum < 4000000;) {
+		var fibNum = x + y;
 		x = y;
-		console.log(sum);
+		y = fibNum;
+		if(fibNum %2 == 0)
+		{
+			sum += fibNum;
+			console.log("Answser is:"+fibNum);
+		}
+		console.log(fibNum);
 	}
-	alert("done");
 }
